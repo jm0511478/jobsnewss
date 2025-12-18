@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🌟 Elite Career Network - Global Opportunities</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        /* Base Styles (Kept mostly same, changed base BG) */
+        * {
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        /* New Dark & Luxurious Background */
+        body {
+            background-color: #1a1a2e; /* Deep dark blue/purple */
+            color: #f0f4f8;
+        }
+        
+        /* Premium Hero Gradient (Deeper, Richer Colors) */
+        .gradient-bg {
+            background: linear-gradient(135deg, #0f0f29 0%, #1a1a2e 100%); /* Very dark start to the body BG color */
+            border-bottom: 5px solid #e94560; /* Subtle underline */
+        }
+
+        /* Hero Text Gradient (Brighter for Contrast) */
+        .hero-text-glow {
+            background: linear-gradient(45deg, #ff7e5f, #feb47b); /* Warm, bright gradient for text */
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* Animations */
+        .animate-float {
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        .animate-pulse-slow {
+            animation: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); } /* Slightly less movement */
+        }
+        
+        /* Job Card - Glassmorphism & Shadow */
+        .job-card {
+            transition: all 0.4s ease;
+            background: rgba(30, 30, 48, 0.6); /* Darker transparent background */
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1); /* Subtle white border */
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+        }
+        
+        .job-card:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.3), 0 0 40px rgba(233, 69, 96, 0.2); /* Added color glow on hover */
+        }
+        
+        /* Neon/Glow Effect on Buttons (Changed to a cool blue/pink glow) */
+        .neon-glow {
+            box-shadow: 0 0 15px rgba(255, 126, 95, 0.6), 0 0 30px rgba(254, 180, 123, 0.4);
+        }
+        
+        /* Stats Counter (More prominent) */
+        .stats-counter {
+            background: rgba(255, 255, 255, 0.1);
+            color: #ff7e5f;
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            font-weight: 700;
+            display: inline-block;
+            margin: 0.25rem;
+            border: 1px solid #ff7e5f;
+            transition: background-color 0.3s;
+        }
+
+        .stats-counter:hover {
+            background-color: #ff7e5f;
+            color: #1a1a2e;
+        }
+        
+        /* Trust Badge (Darker and more defined) */
+        .trust-badge {
+            background: #2a2a4e;
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 50px;
+            margin: 0.5rem;
+            display: inline-block;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+
+        .trust-badge:hover {
+            background: #e94560;
+            transform: scale(1.05);
+        }
+        
+        /* Review Card (Glass effect in a dark environment) */
+        .review-card {
+            background: rgba(40, 40, 60, 0.5); /* Darker transparency */
+            backdrop-filter: blur(8px);
+            border-radius: 20px;
+            padding: 2rem;
+            margin: 1rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            transition: transform 0.4s ease;
+        }
+        
+        .review-card:hover {
+            transform: translateY(-5px) rotate(1deg); /* Added subtle rotation */
+            box-shadow: 0 15px 40px rgba(0,0,0,0.5);
+        }
+    </style>
+</head>
+<body class="bg-gray-900">
+    
+    <section class="gradient-bg min-h-screen relative overflow-hidden">
+        <div class="absolute inset-0 bg-black bg-opacity-30"></div>
+        <div class="container mx-auto px-4 py-24 relative z-10">
+            <div class="text-center text-white">
+                <div class="animate-float">
+                    <h1 class="text-7xl md:text-9xl font-extrabold mb-8 leading-tight">
+                        <span class="hero-text-glow">ELITE</span> <br class="md:hidden"> CAREER NETWORK 
+                    </h1>
+                    <p class="text-3xl md:text-4xl mb-10 font-light opacity-90">
+                        Hand-Picked Global Opportunities. <span class="text-yellow-400 font-medium">Your Future. Accelerated.</span>
+                    </p>
+                </div>
+                
+                <div class="flex flex-wrap justify-center gap-4 mb-14">
+                    <div class="stats-counter transition duration-300 hover:neon-glow">
+                        <i class="fas fa-users mr-2"></i>12,847 Active Users
+                    </div>
+                    <div class="stats-counter transition duration-300 hover:neon-glow" style="animation-delay: 0.2s">
+                        <i class="fas fa-briefcase mr-2"></i>8,523 Live Jobs
+                    </div>
+                    <div class="stats-counter transition duration-300 hover:neon-glow" style="animation-delay: 0.4s">
+                        <i class="fas fa-star mr-2"></i>98% Success Rate
+                    </div>
+                </div>
+                
+                <div class="animate-pulse-slow">
+                    <button class="bg-gradient-to-r from-red-500 to-pink-600 text-white px-16 py-5 rounded-full text-2xl font-extrabold neon-glow hover:scale-105 transition-all duration-500 shadow-2xl">
+                        <i class="fas fa-rocket mr-3"></i>
+                        ACCESS ELITE JOBS NOW
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="absolute top-20 left-10 animate-float" style="animation-delay: 1s">
+            <div class="w-24 h-24 bg-white bg-opacity-10 rounded-full flex items-center justify-center">
+                <i class="fas fa-dollar-sign text-white text-3xl opacity-80"></i>
+            </div>
+        </div>
+        <div class="absolute bottom-10 right-20 animate-float" style="animation-delay: 2s">
+            <div class="w-20 h-20 bg-white bg-opacity-10 rounded-full flex items-center justify-center">
+                <i class="fas fa-chart-line text-white text-2xl opacity-80"></i>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-gray-900">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-5xl font-extrabold text-white mb-6">
+                    <i class="fas fa-shield-alt mr-4 text-yellow-500"></i>
+                    TRUSTED BY GLOBAL PROFESSIONALS
+                </h2>
+                <p class="text-xl text-gray-400 mb-8">Join thousands of successful professionals who found their dream careers</p>
+                
+                <div class="flex flex-wrap justify-center">
+                    <div class="trust-badge">
+                        <i class="fas fa-award mr-2"></i>Certified Partner
+                    </div>
+                    <div class="trust-badge">
+                        <i class="fas fa-lock mr-2"></i>256-Bit Secure
+                    </div>
+                    <div class="trust-badge">
+                        <i class="fas fa-globe-americas mr-2"></i>Global Coverage
+                    </div>
+                    <div class="trust-badge">
+                        <i class="fas fa-handshake mr-2"></i>Top Recruiters
+                    </div>
+                </div>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8 mb-12">
+                <div class="review-card">
+                    <div class="flex items-center mb-4">
+                        <div class="w-14 h-14 bg-gradient-to-r from-green-400 to-blue-500 rounded-full flex items-center justify-center text-white font-extrabold text-xl mr-4">
+                            S
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-white">Sarah Johnson</h4>
+                            <div class="text-yellow-500">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 text-lg">"Found my dream job at FedEx in just 3 days! The application process was seamless and professional."</p>
+                </div>
+                
+                <div class="review-card">
+                    <div class="flex items-center mb-4">
+                        <div class="w-14 h-14 bg-gradient-to-r from-purple-400 to-pink-500 rounded-full flex items-center justify-center text-white font-extrabold text-xl mr-4">
+                            M
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-white">Mike Chen</h4>
+                            <div class="text-yellow-500">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 text-lg">"Landed a management position at Coca-Cola! The platform connected me with amazing opportunities."</p>
+                </div>
+                
+                <div class="review-card">
+                    <div class="flex items-center mb-4">
+                        <div class="w-14 h-14 bg-gradient-to-r from-red-400 to-yellow-500 rounded-full flex items-center justify-center text-white font-extrabold text-xl mr-4">
+                            A
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-white">Anna Rodriguez</h4>
+                            <div class="text-yellow-500">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 text-lg">"Kelly Services hiring was incredibly fast! Started my new career within a week of applying."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-gray-800">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-5xl font-extrabold text-white mb-6">
+                    <i class="fas fa-gem mr-4 text-cyan-400"></i>
+                    EXECUTIVE & FEATURED ROLES
+                </h2>
+                <p class="text-xl text-gray-400 mb-8">Exclusive openings for seasoned professionals. Apply discreetly.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-10">
+                <div class="job-card rounded-3xl p-8 flex items-start space-x-6">
+                    <div class="w-24 h-24 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full flex items-center justify-center flex-shrink-0 text-white text-3xl shadow-lg">
+                        <i class="fas fa-user-tie"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-3xl font-extrabold mb-2 text-white">Sr. Data Scientist (Remote)</h3>
+                        <p class="text-gray-400 mb-4">Leading Tech Unicorn</p>
+                        <ul class="list-disc pl-5 space-y-2 text-gray-300">
+                            <li>$150k - $220k Annually</li>
+                            <li>Full Health & Equity Package</li>
+                            <li>3+ Years Experience Required</li>
+                        </ul>
+                        <a href="#" class="mt-4 inline-block bg-gradient-to-r from-green-500 to-teal-500 text-white px-6 py-3 rounded-full font-bold hover:scale-105 transition duration-300">
+                            View Details
+                        </a>
+                    </div>
+                </div>
+
+                <div class="job-card rounded-3xl p-8 flex items-start space-x-6">
+                    <div class="w-24 h-24 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full flex items-center justify-center flex-shrink-0 text-white text-3xl shadow-lg">
+                        <i class="fas fa-chart-bar"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-3xl font-extrabold mb-2 text-white">Regional Sales Director</h3>
+                        <p class="text-gray-400 mb-4">Fortune 500 Manufacturing</p>
+                        <ul class="list-disc pl-5 space-y-2 text-gray-300">
+                            <li>$180k+ OTE (On Target Earnings)</li>
+                            <li>Company Car & Travel Stipend</li>
+                            <li>Immediate Hiring - Fast Track</li>
+                        </ul>
+                        <a href="#" class="mt-4 inline-block bg-gradient-to-r from-green-500 to-teal-500 text-white px-6 py-3 rounded-full font-bold hover:scale-105 transition duration-300">
+                            View Details
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-gray-900">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-5xl font-extrabold text-white mb-6">
+                    <i class="fas fa-briefcase mr-4 text-pink-500"></i>
+                    INSTANT APPLY OPPORTUNITIES
+                </h2>
+                <p class="text-xl text-gray-400 mb-8">Apply instantly to high-volume positions with industry leaders</p>
+                
+                <div class="inline-flex items-center bg-pink-500 text-white px-8 py-3 rounded-full font-bold text-xl animate-pulse-slow shadow-2xl">
+                    <div class="w-4 h-4 bg-white rounded-full mr-3 pulse-ring"></div>
+                    LIVE APPLICATIONS OPEN NOW
+                </div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <div class="job-card rounded-3xl p-8 text-center">
+                    <div class="company-logo mx-auto" style="background: linear-gradient(135deg, #2E86AB, #A23B72);">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="w-full h-48 bg-gradient-to-r from-blue-400 to-purple-500 rounded-2xl mb-6 flex items-center justify-center">
+                        <div class="text-white text-center">
+                            <i class="fas fa-briefcase text-6xl mb-4"></i>
+                            <p class="text-xl font-bold">UPS Jobs</p>
+                        </div>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-white">UPS Jobs</h3>
+                    <p class="text-gray-400 mb-6">Global workforce solutions and staffing services. Multiple positions available in your area.</p>
+                    
+                    <div class="flex justify-center mb-6">
+                        <span class="bg-green-600 text-white px-3 py-1 rounded-full text-sm font-semibold mr-2">
+                            <i class="fas fa-circle text-green-300 mr-1"></i>2,341 Active
+                        </span>
+                        <span class="bg-blue-600 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                            <i class="fas fa-clock mr-1"></i>Hiring Now
+                        </span>
+                    </div>
+                    
+                    <div class="mb-6">
+                        <div class="text-3xl font-bold text-green-400 mb-2">$18-28/hr</div>
+                        <div class="text-sm text-gray-500">Starting Range</div>
+                    </div>
+                    
+                    <a href="https://click2daff.com/click?o=3728&p=4250&s1=aziz" target="_blank" 
+                       class="block w-full bg-gradient-to-r from-purple-500 to-pink-500 text-white py-4 rounded-2xl font-bold text-lg hover:scale-105 transition-all duration-300 neon-glow">
+                        <i class="fas fa-bolt mr-2"></i>
+                        APPLY INSTANTLY
+                    </a>
+                </div>
+
+                <div class="job-card rounded-3xl p-8 text-center">
+                    <div class="company-logo mx-auto" style="background: linear-gradient(135deg, #38A169, #319795);">
+                        <i class="fas fa-heartbeat"></i>
+                    </div>
+                    <div class="w-full h-48 bg-gradient-to-r from-green-400 to-teal-500 rounded-2xl mb-6 flex items-center justify-center">
+                        <div class="text-white text-center">
+                            <i class="fas fa-heartbeat text-6xl mb-4"></i>
+                            <p class="text-xl font-bold">Healthcare & Medical</p>
+                        </div>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-white">Medical Jobs</h3>
+                    <p class="text-gray-400 mb-6">Find nursing, tech, and administrative positions at top hospitals and clinics.</p>
+                    
+                    <div class="flex justify-center mb-6">
+                        <span class="bg-green-600 text-white px-3 py-1 rounded-full text-sm font-semibold mr-2">
+                            <i class="fas fa-circle text-green-300 mr-1"></i>4,120 Active
+                        </span>
+                        <span class="bg-teal-600 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                            <i class="fas fa-hand-holding-medical mr-1"></i>High Demand
+                        </span>
+                    </div>
+                    
+                    <div class="mb-6">
+                        <div class="text-3xl font-bold text-green-400 mb-2">$25-45/hr</div>
+                        <div class="text-sm text-gray-500">Plus Certifications</div>
+                    </div>
+                    
+                    <a href="https://click2daff.com/click?o=3734&p=4250&s1=aziz" target="_blank" 
+                       class="block w-full bg-gradient-to-r from-green-500 to-teal-500 text-white py-4 rounded-2xl font-bold text-lg hover:scale-105 transition-all duration-300 neon-glow">
+                        <i class="fas fa-stethoscope mr-2"></i>
+                        FIND MEDICAL JOBS
+                    </a>
+                </div>
+
+                <div class="job-card rounded-3xl p-8 text-center">
+                    <div class="company-logo mx-auto" style="background: linear-gradient(135deg, #FF7F50, #E9967A);">
+                        <i class="fas fa-truck-moving"></i>
+                    </div>
+                    <div class="w-full h-48 bg-gradient-to-r from-orange-500 to-red-600 rounded-2xl mb-6 flex items-center justify-center">
+                        <div class="text-white text-center">
+                            <i class="fas fa-truck-moving text-6xl mb-4"></i>
+                            <p class="text-xl font-bold">Driver Jobs</p>
+                        </div>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-white">Professional Driver Jobs</h3>
+                    <p class="text-gray-400 mb-6">Trucking, delivery, and courier opportunities with competitive pay and signing bonuses.</p>
+                    
+                    <div class="flex justify-center mb-6">
+                        <span class="bg-green-600 text-white px-3 py-1 rounded-full text-sm font-semibold mr-2">
+                            <i class="fas fa-circle text-green-300 mr-1"></i>3,901 Active
+                        </span>
+                        <span class="bg-red-600 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                            <i class="fas fa-gas-pump mr-1"></i>Sign-on Bonus
+                        </span>
+                    </div>
+                    
+                    <div class="mb-6">
+                        <div class="text-3xl font-bold text-green-400 mb-2">$22-38/hr</div>
+                        <div class="text-sm text-gray-500">High Earning Potential</div>
+                    </div>
+                    
+                    <a href="https://click2daff.com/click?o=3733&p=4250&s1=aziz" target="_blank" 
+                       class="block w-full bg-gradient-to-r from-orange-500 to-red-500 text-white py-4 rounded-2xl font-bold text-lg hover:scale-105 transition-all duration-300 neon-glow">
+                        <i class="fas fa-road mr-2"></i>
+                        START DRIVING NOW
+                    </a>
+                </div>
+
+                <div class="job-card rounded-3xl p-8 text-center">
+                    <div class="company-logo mx-auto" style="background: linear-gradient(135deg, #6A5ACD, #BA55D3);">
+                        <i class="fas fa-laptop-house"></i>
+                    </div>
+                    <div class="w-full h-48 bg-gradient-to-r from-indigo-400 to-pink-500 rounded-2xl mb-6 flex items-center justify-center">
+                        <div class="text-white text-center">
+                            <i class="fas fa-laptop-house text-6xl mb-4"></i>
+                            <p class="text-xl font-bold">Remote Jobs</p>
+                        </div>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-white">Work From Home Roles</h3>
+                    <p class="text-gray-400 mb-6">Customer service, data entry, and tech support roles you can do from anywhere.</p>
+                    
+                    <div class="flex justify-center mb-6">
+                        <span class="bg-green-600 text-white px-3 py-1 rounded-full text-sm font-semibold mr-2">
+                            <i class="fas fa-circle text-green-300 mr-1"></i>5,872 Active
+                        </span>
+                        <span class="bg-pink-600 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                            <i class="fas fa-couch mr-1"></i>WFH Flexibility
+                        </span>
+                    </div>
+                    
+                    <div class="mb-6">
+                        <div class="text-3xl font-bold text-green-400 mb-2">$15-25/hr</div>
+                        <div class="text-sm text-gray-500">Start Immediately</div>
+                    </div>
+                    
+                    <a href="https://click2daff.com/click?o=3758&p=4250&s1=aziz" target="_blank" 
+                       class="block w-full bg-gradient-to-r from-purple-500 to-indigo-600 text-white py-4 rounded-2xl font-bold text-lg hover:scale-105 transition-all duration-300 neon-glow">
+                        <i class="fas fa-globe mr-2"></i>
+                        EXPLORE REMOTE WORK
+                    </a>
+                </div>
+
+                <div class="job-card rounded-3xl p-8 text-center">
+                    <div class="company-logo mx-auto" style="background: linear-gradient(135deg, #0070D1, #00BFFF);">
+                        <i class="fas fa-store"></i>
+                    </div>
+                    <div class="w-full h-48 bg-gradient-to-r from-blue-600 to-sky-400 rounded-2xl mb-6 flex items-center justify-center">
+                        <div class="text-white text-center">
+                            <i class="fas fa-store text-6xl mb-4"></i>
+                            <p class="text-xl font-bold">Walmart</p>
+                        </div>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-white">Walmart & Retail Careers</h3>
+                    <p class="text-gray-400 mb-6">Join the leading retail giant. Store associate, management, and distribution center roles.</p>
+                    
+                    <div class="flex justify-center mb-6">
+                        <span class="bg-green-600 text-white px-3 py-1 rounded-full text-sm font-semibold mr-2">
+                            <i class="fas fa-circle text-green-300 mr-1"></i>3,450 Active
+                        </span>
+                        <span class="bg-sky-600 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                            <i class="fas fa-award mr-1"></i>Career Growth
+                        </span>
+                    </div>
+                    
+                    <div class="mb-6">
+                        <div class="text-3xl font-bold text-green-400 mb-2">$14-22/hr</div>
+                        <div class="text-sm text-gray-500">Excellent Benefits</div>
+                    </div>
+                    
+                    <a href="https://click2daff.com/click?o=3731&p=4250&s1=aziz" target="_blank" 
+                       class="block w-full bg-gradient-to-r from-blue-500 to-cyan-500 text-white py-4 rounded-2xl font-bold text-lg hover:scale-105 transition-all duration-300 neon-glow">
+                        <i class="fas fa-cart-plus mr-2"></i>
+                        APPLY TO WALMART
+                    </a>
+                </div>
+
+                <div class="job-card rounded-3xl p-8 text-center">
+                    <div class="company-logo mx-auto" style="background: linear-gradient(135deg, #1E88E5, #1565C0);">
+                        <i class="fas fa-plane"></i>
+                    </div>
+                    <div class="w-full h-48 bg-gradient-to-r from-sky-400 to-blue-600 rounded-2xl mb-6 flex items-center justify-center">
+                        <div class="text-white text-center">
+                            <i class="fas fa-plane-departure text-6xl mb-4"></i>
+                            <p class="text-xl font-bold">Airport Careers</p>
+                        </div>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-white">Airport Jobs</h3>
+                    <p class="text-gray-400 mb-6">Exciting aviation careers at major airports. Ground crew, security, customer service, and more.</p>
+                    
+                    <div class="flex justify-center mb-6">
+                        <span class="bg-green-600 text-white px-3 py-1 rounded-full text-sm font-semibold mr-2">
+                            <i class="fas fa-circle text-green-300 mr-1"></i>1,654 Active
+                        </span>
+                        <span class="bg-sky-600 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                            <i class="fas fa-plane mr-1"></i>Aviation
+                        </span>
+                    </div>
+                    
+                    <div class="mb-6">
+                        <div class="text-3xl font-bold text-green-400 mb-2">$17-26/hr</div>
+                        <div class="text-sm text-gray-500">Flight Benefits</div>
+                    </div>
+                    
+                    <a href="https://click2daff.com/click?o=3791&p=4250&s1=aziz" target="_blank" 
+                       class="block w-full bg-gradient-to-r from-sky-500 to-blue-600 text-white py-4 rounded-2xl font-bold text-lg hover:scale-105 transition-all duration-300 neon-glow">
+                        <i class="fas fa-plane mr-2"></i>
+                        TAKE FLIGHT
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-gray-700 text-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-5xl font-extrabold mb-6">
+                    <i class="fas fa-trophy mr-4 text-yellow-400"></i>
+                    WHY CHOOSE THE ELITE NETWORK?
+                </h2>
+                <p class="text-xl opacity-90">Experience the difference with our premium job placement service</p>
+            </div>
+            
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="text-center">
+                    <div class="w-20 h-20 bg-gradient-to-r from-green-400 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-6 animate-pulse-slow">
+                        <i class="fas fa-bolt text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-extrabold mb-4">One-Click Apply</h3>
+                    <p class="opacity-75">Apply to multiple jobs with one click. No lengthy forms or waiting periods.</p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="w-20 h-20 bg-gradient-to-r from-purple-400 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-6 animate-pulse-slow" style="animation-delay: 0.5s">
+                        <i class="fas fa-shield-alt text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-extrabold mb-4">Recruiter Vetted</h3>
+                    <p class="opacity-75">All job listings are verified and from legitimate employers only.</p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="w-20 h-20 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full flex items-center justify-center mx-auto mb-6 animate-pulse-slow" style="animation-delay: 1s">
+                        <i class="fas fa-headset text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-extrabold mb-4">Dedicated Support</h3>
+                    <p class="opacity-75">Get help anytime with our dedicated support team.</p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="w-20 h-20 bg-gradient-to-r from-red-400 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-6 animate-pulse-slow" style="animation-delay: 1.5s">
+                        <i class="fas fa-money-bill-wave text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-extrabold mb-4">High-Pay Focus</h3>
+                    <p class="opacity-75">We prioritize jobs with top-tier compensation and benefits.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-gradient-to-r from-pink-600 to-red-700 text-white text-center">
+        <div class="container mx-auto px-4">
+            <div class="animate-float">
+                <h2 class="text-6xl font-extrabold mb-6">
+                    🚨 Don't Miss Out! Start Your New Career Today.
+                </h2>
+                <p class="text-2xl mb-12 opacity-90">
+                    Your next big opportunity is just one click away.
+                </p>
+                
+                <div class="flex flex-wrap justify-center gap-6">
+                    <button class="bg-gradient-to-r from-yellow-300 to-orange-400 text-gray-900 px-14 py-6 rounded-full text-2xl font-extrabold hover:scale-105 transition-all duration-300 neon-glow shadow-xl">
+                        <i class="fas fa-fire mr-3"></i>
+                        APPLY IN 60 SECONDS
+                    </button>
+                    
+                    <button class="bg-white bg-opacity-30 backdrop-blur-sm border border-white border-opacity-50 text-white px-14 py-6 rounded-full text-2xl font-bold hover:scale-105 transition-all duration-300">
+                        <i class="fas fa-info-circle mr-3"></i>
+                        Explore Featured Roles
+                    </button>
+                </div>
+                
+                <div class="mt-12 flex flex-wrap justify-center gap-6">
+                    <div class="bg-black bg-opacity-30 px-6 py-3 rounded-full font-bold">
+                        <i class="fas fa-clock mr-2 text-red-300"></i>
+                        24/7 Application System
+                    </div>
+                    <div class="bg-black bg-opacity-30 px-6 py-3 rounded-full font-bold">
+                        <i class="fas fa-lock mr-2 text-green-300"></i>
+                        Secure & Private Portal
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-950 text-white py-12">
+        <div class="container mx-auto px-4 text-center">
+            <div class="mb-8">
+                <h3 class="text-3xl font-extrabold mb-4 text-yellow-400">🌟 Elite Career Network</h3>
+                <p class="text-xl opacity-75">Your gateway to accelerated career success</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8 mb-8">
+                <div>
+                    <h4 class="text-lg font-extrabold mb-4">Quick Links</h4>
+                    <ul class="space-y-2 opacity-75">
+                        <li><a href="#" class="hover:text-pink-400 transition">About Us</a></li>
+                        <li><a href="#" class="hover:text-pink-400 transition">Privacy Policy</a></li>
+                        <li><a href="#" class="hover:text-pink-400 transition">Terms of Service</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-extrabold mb-4">Support</h4>
+                    <ul class="space-y-2 opacity-75">
+                        <li><a href="#" class="hover:text-pink-400 transition">Help Center</a></li>
+                        <li><a href="#" class="hover:text-pink-400 transition">Contact Us</a></li>
+                        <li><a href="#" class="hover:text-pink-400 transition">Live Chat</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-extrabold mb-4">Connect</h4>
+                    <div class="flex justify-center space-x-4">
+                        <a href="#" class="text-3xl hover:text-pink-400 transition"><i class="fab fa-facebook-square"></i></a>
+                        <a href="#" class="text-3xl hover:text-pink-400 transition"><i class="fab fa-twitter-square"></i></a>
+                        <a href="#" class="text-3xl hover:text-pink-400 transition"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="text-3xl hover:text-pink-400 transition"><i class="fab fa-instagram-square"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 pt-8">
+                <p class="opacity-75 text-sm">&copy; 2024 Elite Career Network. All rights reserved. Find your dream career today!</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Add dynamic counter animation
+        function animateCounters() {
+            const counters = document.querySelectorAll('.stats-counter');
+            counters.forEach(counter => {
+                counter.addEventListener('mouseenter', () => {
+                    counter.style.transform = 'scale(1.1)';
+                });
+                counter.addEventListener('mouseleave', () => {
+                    counter.style.transform = 'scale(1)';
+                });
+            });
+        }
+
+        // Add scroll animations
+        function addScrollAnimations() {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, {
+                threshold: 0.1 // Trigger when 10% of the item is visible
+            });
+
+            document.querySelectorAll('.job-card, .review-card, .trust-badge').forEach(element => {
+                element.style.opacity = '0';
+                element.style.transform = 'translateY(30px)';
+                element.style.transition = 'all 0.6s ease-out';
+                observer.observe(element);
+            });
+        }
+
+        // Initialize animations
+        document.addEventListener('DOMContentLoaded', () => {
+            animateCounters();
+            addScrollAnimations();
+        });
+    </script>
+</body>
+</html>
